@@ -20,15 +20,15 @@ This application parses Swagger files (JSON or YAML) and displays the contents i
 ## Requirements
 
 - streamlit
-- pandas
-- pyyaml
+- PyYAML
+- watchdog
 
 ## Installation
 
 To install the required packages, run the following command:
 
 ```shell
-pip install streamlit pandas pyyaml
+pip install streamlit pyyaml watchdog
 ```
 
 Usage
