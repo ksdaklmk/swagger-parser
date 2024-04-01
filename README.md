@@ -21,15 +21,14 @@ This application parses Swagger files (JSON or YAML) and displays the contents i
 
 - streamlit
 - pandas
-- base64
-- os
+- pyyaml
 
 ## Installation
 
 To install the required packages, run the following command:
 
 ```shell
-pip install streamlit pandas
+pip install streamlit pandas pyyaml
 ```
 
 Usage
