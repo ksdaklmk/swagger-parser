@@ -1,8 +1,8 @@
-import streamlit as st
-from swagger_parser import process_swagger_file
 import os
 import base64
 import pandas as pd
+import streamlit as st
+from swagger_parser import process_swagger_file
 
 
 def get_download_link(file_path):
@@ -14,10 +14,7 @@ def get_download_link(file_path):
 
 
 def display_dataframe(file_path):
-    # Read the CSV file into a Pandas DataFrame
     df = pd.read_csv(file_path)
-
-    # Display the DataFrame
     st.dataframe(df)
 
 
@@ -37,7 +34,6 @@ if uploaded_file is not None:
         download_link = get_download_link(output_file)
         st.markdown(download_link, unsafe_allow_html=True)
 
-        # Display the dataframe with highlighted columns
         display_dataframe(output_file)
     except Exception as e:
         st.error(f"Error processing file: {e}")
