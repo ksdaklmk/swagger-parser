@@ -1,6 +1,7 @@
 # Swagger File Parser
 
 This application parses Swagger files (JSON or YAML) and displays the contents in a user-friendly format.
+![image](files:screenshot.png)
 
 ## Features
 
