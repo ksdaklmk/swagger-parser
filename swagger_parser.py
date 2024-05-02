@@ -38,20 +38,20 @@ def extract_schemas(swagger_data):
     for schema_name, schema in schemas.items():
         properties = schema.get('properties', {})
         required = schema.get('required', [])
-        enum = schema.get('enum', [])
 
         for prop_name, prop in properties.items():
-          item = {
-            'schema name': schema_name,
-            'properties name': prop_name,
-            'type': prop.get('type'),
-            'format': prop.get('format'),
-            'description': prop.get('description'),
-            'example': prop.get('example'),
-            'required': prop_name in required,
-            'enum': ', '.join(enum) if enum else ''
-          }
-          parsed_data.append(item)
+            enum = prop.get('enum', [])
+            item = {
+                'schema name': schema_name,
+                'properties name': prop_name,
+                'type': prop.get('type'),
+                'format': prop.get('format'),
+                'description': prop.get('description'),
+                'example': prop.get('example'),
+                'required': prop_name in required,
+                'enum': ', '.join(enum) if enum else ''
+            }
+            parsed_data.append(item)
     return parsed_data
 
 
