@@ -2,7 +2,7 @@
 
 This application parses Swagger files (JSON or YAML) and displays the contents in a user-friendly format.
 
-![image](files://screenshot.png)
+<img width="1252" alt="screenshot" src="https://github.com/ksdaklmk/swagger-parser/assets/49706091/3fcb5b06-c71e-430a-bca0-fcbea0c114f6">
 
 ## Features
 
