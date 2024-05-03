@@ -23,14 +23,13 @@ This application parses Swagger files (JSON or YAML) and displays the contents i
 
 - streamlit
 - PyYAML
-- watchdog
 
 ## Installation
 
 To install the required packages, run the following command:
 
 ```shell
-pip install streamlit pyyaml watchdog
+pip install streamlit pyyaml
 ```
 
 Usage
