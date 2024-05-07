@@ -6,6 +6,15 @@ from swagger_parser import process_swagger_file
 
 
 def get_download_link(file_path):
+    """
+    Generates a download link for a given file path.
+
+    Args:
+        file_path (str): The path to the file.
+
+    Returns:
+        str: The HTML code for the download link.
+    """
     with open(file_path, "rb") as f:
         bytes = f.read()
         b64 = base64.b64encode(bytes).decode()
@@ -14,8 +23,24 @@ def get_download_link(file_path):
 
 
 def display_dataframe(file_path):
+    """
+    Displays a DataFrame with highlighting for the 'required' column.
+
+    Args:
+        file_path (str): The path to the CSV file.
+
+    Returns:
+        None
+    """
     df = pd.read_csv(file_path)
-    st.dataframe(df)
+
+    # Define a function to apply highlighting
+    def highlight_true(s):
+        return ['background-color: yellow' if v else '' for v in s]
+
+    # Apply the function to the DataFrame
+    styled_df = df.style.apply(highlight_true, subset=['required'])
+    st.dataframe(styled_df)
 
 
 st.set_page_config(page_title="Swagger File Parser", layout="wide")
