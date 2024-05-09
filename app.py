@@ -45,7 +45,7 @@ def display_dataframe(file_path):
 
 st.set_page_config(page_title="Swagger File Parser", layout="wide")
 st.title('Swagger File Parser')
-st.write('version 1.0.0')
+st.write('version 1.0.1')
 uploaded_file = st.file_uploader("Upload a Swagger file (JSON or YAML)", type=['json', 'yaml', 'yml'])
 if uploaded_file is not None:
     try:
